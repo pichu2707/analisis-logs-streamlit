@@ -1,0 +1,49 @@
+# Archivos de logs
+*.log
+**/*.log
+logs/
+*.access.log
+*.error.log
+
+# Archivos grandes de datos
+*.csv
+*.json
+*.gz
+*.zip
+*.tar
+
+# Directorios de caché
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.cache/
+
+# Directorio de entornos virtuales
+uniite/
+venv/
+env/
+.env
+
+# Archivos de configuración local
+.streamlit/secrets.toml
+config/local_settings.py
+
+# Archivos temporales
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Datos procesados
+data/processed/
+data/raw/*.log
+data/raw/*.csv
+
