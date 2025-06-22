@@ -1,32 +1,18 @@
-# Analizador de logs 
-Esta herramienta nos ayudará a analizar los logs y filtración de estos para poder trabajar con los datos del servidor de nuestra web, ayudándonos a saber que es lo que está ocurriendo de manera más exacta sin los problemas que podemos encontrarnos entre ellos de las aceptaciopnes de cookies.
+# Analizador de Logs
 
-## Estructura del Proyecto
+Esta herramienta nos ayudará a analizar y filtrar logs para poder trabajar con los datos del servidor de nuestra web. Su propósito es entender con mayor precisión lo que está ocurriendo, evitando interferencias comunes como las aceptaciones de cookies.
+
+## 📁 Estructura del Proyecto
+
 
 ```
 ANALISIS-LOGS
-
-├── src
-│   ├── app.py                # Punto de entrada de la aplicación Streamlit
-│   ├── components
-│   │   ├── __init__.py       # Inicializa el paquete de componentes
-│   │   ├── filters.py         # Funciones para filtrar logs
-│   │   └── visualizations.py   # Funciones para visualizar logs
-│   ├── data
-│   │   ├── __init__.py       # Inicializa el paquete de datos
-│   │   └── log_processor.py   # Lógica para procesar archivos de logs
-│   └── utils
-│       ├── __init__.py       # Inicializa el paquete de utilidades
-│       └── file_handlers.py   # Funciones para manejar archivos
-├── data
-│   ├── raw                   # Directorio para archivos de logs sin procesar
-│   └── processed             # Directorio para archivos de logs procesados
-├── config
-│   └── settings.py           # Configuración de la aplicación
-├── requirements.txt          # Dependencias del proyecto
-├── .streamlit
-│   └── config.toml           # Configuración de Streamlit
-└── README.md                 # Documentación del proyecto
+.
+├── logs.py
+├── main.py
+├── requirements.txt
+├── streamlit_app.py
+└── transform_logs.py
 ```
 
 ## Instalación
@@ -51,6 +37,22 @@ streamlit run streamlit_app.py
 ```
 
 Una vez que la aplicación esté en funcionamiento, podrás cargar archivos de logs, aplicar filtros y visualizar los datos de manera interactiva.
+
+## Formato de logs compatibles
+Ahora mismo la herramietna está preparada para trabajar los siguientes formatos de log
+
+2025-05-26T02:12:22+02:00 {code="200", domain="www.dominio.com", port="443"} {
+  "agent": "Mozilla/5.0 (...)",
+  "code": 200,
+  "domain": "www.dominio.com",
+  "forwardedfor": "00.00.000.00",
+  "host": "00.00.000.00",
+  "method": "GET",
+  "path": "/public/486x243/imagen.jpg",
+  "port": 443,
+  ...
+}
+
 
 ## Contribuciones
 
